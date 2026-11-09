@@ -1,4 +1,4 @@
-# Snowflake Hands-on Guides
+# Snowflake Demo Packs
 
 **Owner:** Janet Cho · **Last reviewed:** November 2026 · **License:** [Apache 2.0](LICENSE)
 
