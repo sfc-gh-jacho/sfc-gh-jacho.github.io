@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snowflake Hands-on Guides — Governance, Cost and Financial Services</title>
+  <meta name="description" content="Step-by-step Snowflake guides with copy-and-run SQL: PII protection, cost chargeback, regulatory audit with Time Travel, and trade surveillance." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ────── Nav ────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="3.3" y1="7" x2="20.7" y2="17"/><line x1="3.3" y1="17" x2="20.7" y2="7"/></svg></div>
+        Snowflake Hands-on Guides
+      </a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#guides">Guides</a></li>
+        <li><a href="#how">How They Work</a></li>
+        <li><a href="#start">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ────── Hero ────── -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        Built on Snowflake Horizon
+      </div>
+      <h1>Snowflake <span>Hands-on Guides</span></h1>
+      <p>Self-contained walkthroughs you can run in your own Snowflake account. Each guide comes with copy-and-run SQL, synthetic data and real results.</p>
+      <div class="hero-ctas">
+        <a href="#guides" class="btn btn-primary">Browse the Guides</a>
+        <a href="#start" class="btn btn-ghost">How to Get Started</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-val">4</div><div class="hero-stat-label">Guides</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">20–30 min</div><div class="hero-stat-label">Each</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">100%</div><div class="hero-stat-label">Synthetic Data</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">Apache 2.0</div><div class="hero-stat-label">Free to Reuse</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ────── Guides ────── -->
+    <section id="guides">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Guides</div>
+          <h2>Pick a Guide</h2>
+          <p>Each guide creates its own prefixed objects, changes nothing that already exists in your account, and ends with a cleanup step.</p>
+        </div>
+
+        <div class="guide-grid">
+
+          <article class="guide-card accent-pii reveal">
+            <div class="guide-top">
+              <div class="guide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <div><div class="guide-cat">Data Governance</div><h3><a href="https://sfc-gh-jacho.github.io/sfguide-pii-data-protection/">Protecting PII in Snowflake</a></h3></div>
+            </div>
+            <p>Discover, tag and protect sensitive customer data so that four roles each see a different, policy-driven version of the same table.</p>
+            <ul class="guide-features">
+              <li>Classification</li><li>Tag-based masking</li><li>Masking policies</li><li>Row access</li><li>Secure views</li>
+            </ul>
+            <div class="guide-meta"><span><strong>~20 min</strong></span><span><strong>Enterprise</strong> edition</span><span>Least-privilege option</span></div>
+            <div class="guide-actions">
+              <a class="btn btn-primary btn-sm" href="https://sfc-gh-jacho.github.io/sfguide-pii-data-protection/">Open guide</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/sfc-gh-jacho/sfguide-pii-data-protection">GitHub</a>
+            </div>
+          </article>
+
+          <article class="guide-card accent-cost reveal">
+            <div class="guide-top">
+              <div class="guide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+              <div><div class="guide-cat">Cost Governance</div><h3><a href="https://sfc-gh-jacho.github.io/sfguide-cost-chargeback-tagging/">Cost Chargeback with Tags</a></h3></div>
+            </div>
+            <p>Turn one shared bill into per-team chargeback, with guardrails and budgets that stop overspend, plus queries that flag waste and spikes.</p>
+            <ul class="guide-features">
+              <li>Object tags</li><li>Resource monitors</li><li>Custom budgets</li><li>Query attribution</li><li>Account usage</li>
+            </ul>
+            <div class="guide-meta"><span><strong>~30 min</strong></span><span><strong>Enterprise</strong> edition</span><span>Least-privilege option (2 admin-only steps)</span></div>
+            <div class="guide-actions">
+              <a class="btn btn-primary btn-sm" href="https://sfc-gh-jacho.github.io/sfguide-cost-chargeback-tagging/">Open guide</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/sfc-gh-jacho/sfguide-cost-chargeback-tagging">GitHub</a>
+            </div>
+          </article>
+
+          <article class="guide-card accent-reg reveal">
+            <div class="guide-top">
+              <div class="guide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><div class="guide-cat">Financial Services</div><h3><a href="https://sfc-gh-jacho.github.io/sfguide-regulatory-audit-time-travel/">Regulatory Reporting with Time Travel</a></h3></div>
+            </div>
+            <p>Show a regulator exactly what your data said on the filing date, what changed afterwards and who changed it, with no backup restores.</p>
+            <ul class="guide-features">
+              <li>Time Travel</li><li>Zero-copy clones</li><li>Streams</li><li>Access history</li><li>UNDROP</li>
+            </ul>
+            <div class="guide-meta"><span><strong>~20 min</strong></span><span><strong>Enterprise</strong> (Standard with 1-day retention)</span><span>Least-privilege option</span></div>
+            <div class="guide-actions">
+              <a class="btn btn-primary btn-sm" href="https://sfc-gh-jacho.github.io/sfguide-regulatory-audit-time-travel/">Open guide</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/sfc-gh-jacho/sfguide-regulatory-audit-time-travel">GitHub</a>
+            </div>
+          </article>
+
+          <article class="guide-card accent-surv reveal">
+            <div class="guide-top">
+              <div class="guide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <div><div class="guide-cat">Financial Services</div><h3><a href="https://sfc-gh-jacho.github.io/sfguide-trade-surveillance/">Trade Surveillance in Snowflake</a></h3></div>
+            </div>
+            <p>Find wash trades, spoofing, front-running and marking the close among 200,000 orders, in SQL, with an explanation for every alert.</p>
+            <ul class="guide-features">
+              <li>MATCH_RECOGNIZE</li><li>Window functions</li><li>QUALIFY</li><li>Dynamic Tables</li><li>Masking</li>
+            </ul>
+            <div class="guide-meta"><span><strong>~25 min</strong></span><span><strong>Any</strong> edition (masking: Enterprise)</span><span>Least-privilege option</span></div>
+            <div class="guide-actions">
+              <a class="btn btn-primary btn-sm" href="https://sfc-gh-jacho.github.io/sfguide-trade-surveillance/">Open guide</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/sfc-gh-jacho/sfguide-trade-surveillance">GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────── How they work ────── -->
+    <section id="how" class="bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">How They Work</div>
+          <h2>Built to Run Safely in Your Account</h2>
+        </div>
+        <div class="how-grid reveal">
+          <div class="cortex-card"><h3>One script per guide</h3><p>Download it or copy it step by step. Every step on the page is the same SQL as the file.</p></div>
+          <div class="cortex-card"><h3>Self-contained</h3><p>Each guide creates its own prefixed database, warehouse and roles, and its cleanup step removes them.</p></div>
+          <div class="cortex-card"><h3>Least privilege</h3><p>Every guide can run as a dedicated demo role with only the grants it needs. In Cost Chargeback, resource monitors and budget setup still need an administrator.</p></div>
+          <div class="cortex-card"><h3>Synthetic and private</h3><p>All data is fictional. The pages are static, make no third-party requests and never connect to Snowflake.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────── Get started ────── -->
+    <section id="start">
+      <div class="container narrow">
+        <div class="section-header reveal">
+          <div class="section-label">Get Started</div>
+          <h2>Three Ways to Use a Guide</h2>
+        </div>
+        <ul class="checklist reveal">
+          <li><strong>Run it in Snowsight.</strong> Open a guide, download the SQL, paste it into a worksheet and run it top to bottom.</li>
+          <li><strong>Make it your own.</strong> Every repository is a GitHub template. Click <em>Use this template</em> to start your own copy, licensed under Apache 2.0.</li>
+          <li><strong>Adapt it with Cortex Code.</strong> Each README has example prompts for mapping the guide onto your own tables and thresholds.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ────── Footer ────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <a href="https://sfc-gh-jacho.github.io/sfguide-pii-data-protection/">Protecting PII</a>
+          <a href="https://sfc-gh-jacho.github.io/sfguide-cost-chargeback-tagging/">Cost Chargeback</a>
+          <a href="https://sfc-gh-jacho.github.io/sfguide-regulatory-audit-time-travel/">Regulatory Audit</a>
+          <a href="https://sfc-gh-jacho.github.io/sfguide-trade-surveillance/">Trade Surveillance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="https://docs.snowflake.com/" target="_blank" rel="noopener">Snowflake Documentation</a>
+          <a href="https://docs.snowflake.com/en/user-guide/cortex-code/cortex-code" target="_blank" rel="noopener">Cortex Code</a>
+          <a href="https://github.com/sfc-gh-jacho">GitHub Profile</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Maintained by Janet Cho. Code licensed under <a href="https://github.com/sfc-gh-jacho/sfc-gh-jacho.github.io/blob/main/LICENSE">Apache 2.0</a>. All data in these guides is synthetic, and the illustrative calculations are not regulatory, compliance or financial advice. These sites have no connection to any Snowflake account.</p>
+        <span class="snow-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="3.3" y1="7" x2="20.7" y2="17"/><line x1="3.3" y1="17" x2="20.7" y2="7"/></svg>
+          Built on Snowflake Horizon
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
